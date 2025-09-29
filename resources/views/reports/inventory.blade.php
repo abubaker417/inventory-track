@@ -18,6 +18,11 @@
 	<div class="header small">
 		<div><strong>Location:</strong> {{ $location?->name ?? 'Muzaffar Garh Factory' }}</div>
 		<div><strong>Date:</strong> {{ $from }} to {{ $to }}</div>
+        <div style="margin-top:6px;">
+			<a href="{{ route('inventory.register.export.pdf', ['location_id' => $location?->id, 'from' => $from, 'to' => $to]) }}" style="display:inline-block;padding:6px 10px;background:#2d6cdf;color:#fff;text-decoration:none;border-radius:4px;margin-right:6px;">Download PDF</a>
+			<a href="{{ route('inventory.register.export.csv', ['location_id' => $location?->id, 'from' => $from, 'to' => $to]) }}" style="display:inline-block;padding:6px 10px;background:#16a34a;color:#fff;text-decoration:none;border-radius:4px;">Download CSV</a>
+            <a href="{{ route('inventory.register.export.excel', ['location_id' => $location?->id, 'from' => $from, 'to' => $to]) }}" style="display:inline-block;padding:6px 10px;background:#16a34a;color:#fff;text-decoration:none;border-radius:4px;">Download Excel</a>
+        </div>
 	</div>
 
 	<table>
