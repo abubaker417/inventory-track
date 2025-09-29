@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 255)->unique();
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }

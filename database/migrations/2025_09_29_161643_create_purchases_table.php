@@ -18,7 +18,7 @@ return new class extends Migration
 			$table->datetime('purchased_at');
 			$table->decimal('quantity', 18, 4);
 			$table->decimal('unit_price', 18, 4)->default(0);
-			$table->string('reference', 128)->nullable();
+			$table->string('reference')->nullable();
 			$table->timestamps();
 
 			$table->index(['product_id', 'purchased_at']);

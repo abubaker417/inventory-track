@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('sku', 64)->unique();
-			$table->string('name', 255);
+            $table->string('sku')->unique();
+			$table->string('name');
 			$table->boolean('is_discontinued')->default(false);
             $table->timestamps();
         });
